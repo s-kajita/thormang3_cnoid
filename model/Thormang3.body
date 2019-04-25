@@ -1,0 +1,616 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+angleUnit: radian
+name: THORMANG3
+
+links:
+  -
+    name: WAIST
+    jointType: free
+    translation: [ 0, 0, 0.81 ]
+    centerOfMass: [ -0.0087, 0.0001, 0.0346 ]
+    mass: 6.869
+    inertia: [
+      0.0002369394, 1.0608E-8, -3.322424E-6,
+      1.0608E-8, 0.0001612104, 4.6692E-8,
+      -3.322424E-6, 4.6692E-8, 0.0001608802 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_pelvis_link.wrl" } }
+  -
+    name: TORSO_Y
+    parent: WAIST
+    jointType: revolute
+    jointId: 0
+    jointAxis: [ 0.0, 0.0, 1.0 ]
+    translation: [ 0.0, 0.0, 0.1705 ]
+    jointRange: [ -1.88, 1.88 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 5.383
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_chest_link.wrl" } }
+  -
+    name: LARM_SH_P1
+    parent: TORSO_Y
+    jointType: revolute
+    jointId: 1
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ 0.0, 0.152, 0.16 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.194
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_sh_p1_link.wrl" } }
+  -
+    name: LARM_SH_R
+    parent: LARM_SH_P1
+    jointType: revolute
+    jointId: 2
+    jointAxis: [ -1.0, 0.0, 0.0 ]
+    translation: [ 0.057, 0.060, -0.039 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.875
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_sh_r_link.wrl" } }
+  -
+    name: LARM_SH_P2
+    parent: LARM_SH_R
+    jointType: revolute
+    jointId: 3
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ -0.057, 0.033, 0.0 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.122	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_sh_p2_link.wrl" } }
+  -
+    name: LARM_ELBOW
+    parent: LARM_SH_P2
+    jointType: revolute
+    jointId: 4
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.030, 0.187, 0.057 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.357	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_el_y_link.wrl" } }
+  -
+    name: LARM_WRIST_R
+    parent: LARM_ELBOW
+    jointType: revolute
+    jointId: 5
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ 0.171, 0.030, -0.057 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.357	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_wr_r_link.wrl" } }
+  -
+    name: LARM_WRIST_Y
+    parent: LARM_WRIST_R
+    jointType: revolute
+    jointId: 6
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.039, 0.0, 0.045 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.768	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_wr_y_link.wrl" } }
+  -
+    name: LARM_WRIST_P
+    parent: LARM_WRIST_Y
+    jointType: revolute
+    jointId: 7
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ 0.045, -0.045, -0.045 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.565	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_wr_p_link.wrl" } }
+  -
+    name: LARM_GRIPPER
+    parent: LARM_WRIST_P
+    jointType: revolute
+    jointId: 8
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.0877, 0.0583, 0.0 ]
+    rotation:    [ 0, 0, 1, 0.698]
+    jointRange: [ 0, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.013	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_grip_link.wrl" } }
+  -
+    name: LARM_GRIPPER1
+    parent: LARM_WRIST_P
+    jointType: revolute
+    jointId: 9
+    jointAxis: [ 0.0, 0.0, 1.0 ]
+    translation: [ 0.0877, 0.0317, 0.0 ]
+    rotation:    [ 0, 0, 1, -0.698]
+    jointRange: [ 0, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.013	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_arm_grip_1_link.wrl" } }
+  -
+    name: RARM_SH_P1
+    parent: TORSO_Y
+    jointType: revolute
+    jointId: 10
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ 0.0, -0.152, 0.16 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.194
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_sh_p1_link.wrl" } }
+  -
+    name: RARM_SH_R
+    parent: RARM_SH_P1
+    jointType: revolute
+    jointId: 11
+    jointAxis: [ -1.0, 0.0, 0.0 ]
+    translation: [ 0.057, -0.060, -0.039 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.875
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_sh_r_link.wrl" } }
+  -
+    name: RARM_SH_P2
+    parent: RARM_SH_R
+    jointType: revolute
+    jointId: 12
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ -0.057, -0.033, 0.0 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.122	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_sh_p2_link.wrl" } }
+  -
+    name: RARM_ELBOW
+    parent: RARM_SH_P2
+    jointType: revolute
+    jointId: 13
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.030, -0.187, 0.057 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.357	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_el_y_link.wrl" } }
+  -
+    name: RARM_WRIST_R
+    parent: RARM_ELBOW
+    jointType: revolute
+    jointId: 14
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ 0.171, -0.030, -0.057 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 1.357	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_wr_r_link.wrl" } }
+  -
+    name: RARM_WRIST_Y
+    parent: RARM_WRIST_R
+    jointType: revolute
+    jointId: 15
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.039, 0.0, 0.045 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.768	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_wr_y_link.wrl" } }
+  -
+    name: RARM_WRIST_P
+    parent: RARM_WRIST_Y
+    jointType: revolute
+    jointId: 16
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ 0.045, 0.045, -0.045 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.565	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_wr_p_link.wrl" } }
+  -
+    name: RARM_GRIPPER
+    parent: RARM_WRIST_P
+    jointType: revolute
+    jointId: 17
+    jointAxis: [ 0.0, 0.0, 1.0 ]
+    translation: [ 0.0877, -0.0583, 0.0 ]
+    rotation:    [ 0, 0, 1, -0.698]
+    jointRange: [ 0, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.013	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_grip_1_link.wrl" } }
+  -
+    name: RARM_GRIPPER1
+    parent: RARM_WRIST_P
+    jointType: revolute
+    jointId: 18
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.0877, -0.0317, 0.0 ]
+    rotation:    [ 0, 0, 1, 0.698]
+    jointRange: [ 0, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 0.013	  
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_arm_grip_link.wrl" } }
+  -
+    name: LLEG_HIP_Y
+    parent: WAIST
+    jointType: revolute
+    jointId: 19
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.0, 0.093, -0.018 ]
+    jointRange: [ -1.41, 1.41 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ 0.012, 0.0, -0.025 ]
+    mass: 0.243
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_hip_y_link.wrl" } }
+  -
+    name: LLEG_HIP_R
+    parent: LLEG_HIP_Y
+    jointType: revolute
+    jointId: 20
+    jointAxis: [ -1.0, 0.0, 0.0 ]
+    translation: [ 0.057, 0.0, -0.075 ]
+    jointRange: [ -0.628, 0.942 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.068, 0.0, 0.0 ]
+    mass: 1.045
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_hip_r_link.wrl" } }
+  -
+    name: LLEG_HIP_P
+    parent: LLEG_HIP_R
+    jointType: revolute
+    jointId: 21
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ -0.057, 0.033, 0.0 ]
+    jointRange: [ -1.256, 1.256 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ 0.022, -0.007, -0.168 ]
+    mass: 3.095
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_hip_p_link.wrl" } }
+  -
+    name: LLEG_KNEE_P
+    parent: LLEG_HIP_P
+    jointType: revolute
+    jointId: 22
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ 0.0, 0.06, -0.3 ]
+    jointRange: [ -0.314, 2.198 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.002, -0.066, -0.183 ]
+    mass: 2.401
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_kn_p_link.wrl" } }
+  -
+    name: LLEG_ANKLE_P
+    parent: LLEG_KNEE_P
+    jointType: revolute
+    jointId: 23
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ 0.0, -0.06, -0.3 ]
+    jointRange: [ -1.413, 1.413 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.011, -0.033, 0.0 ]
+    mass: 1.045
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_an_p_link.wrl" } }
+  -
+    name: LLEG_ANKLE_R
+    parent: LLEG_ANKLE_P
+    jointType: revolute
+    jointId: 24
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ 0.057, -0.033, 0.0 ]
+    jointRange: [ -1.57, 1.256 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.07, 0.0, -0.048 ]
+    mass: 0.223
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_an_r_link.wrl" } }
+  -
+    name: LLEG_FOOT
+    parent: LLEG_ANKLE_R
+    jointType: fixed
+    jointId: 25
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ -0.057, 0.0, -0.087 ]
+    jointRange: [ 0, 0 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.07, 0.0, -0.048 ]
+    mass: 0.223
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_foot.wrl" } }
+  -
+    name: RLEG_HIP_Y
+    parent: WAIST
+    jointType: revolute
+    jointId: 26
+    jointAxis: [ 0.0, 0.0, -1.0 ]
+    translation: [ 0.0, -0.093, -0.018 ]
+    jointRange: [ -1.41, 1.41 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.012, 0.0, -0.025 ]
+    mass: 0.243
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_hip_y_link.wrl" } }
+  -
+    name: RLEG_HIP_R
+    parent: RLEG_HIP_Y
+    jointType: revolute
+    jointId: 27
+    jointAxis: [ -1.0, 0.0, 0.0 ]
+    translation: [ 0.057, 0.0, -0.075 ]
+    jointRange: [ -0.942, 0.628 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.068, 0.0, 0.0 ]
+    mass: 1.045
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_hip_r_link.wrl" } }
+  -
+    name: RLEG_HIP_P
+    parent: RLEG_HIP_R
+    jointType: revolute
+    jointId: 28
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ -0.057, -0.033, -0.0 ]
+    jointRange: [ -1.256, 1.256 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ 0.022, -0.007, -0.168 ]
+    mass: 3.095
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_hip_p_link.wrl" } }
+  -
+    name: RLEG_KNEE_P
+    parent: RLEG_HIP_P
+    jointType: revolute
+    jointId: 29
+    jointAxis: [ 0.0, -1.0, 0.0 ]
+    translation: [ 0.0, -0.06, -0.3 ]
+    jointRange: [ -0.314, 2.198 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.002, -0.066, -0.183 ]
+    mass: 2.401
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_kn_p_link.wrl" } }
+  -
+    name: RLEG_ANKLE_P
+    parent: RLEG_KNEE_P
+    jointType: revolute
+    jointId: 30
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ 0.0, 0.06, -0.3 ]
+    jointRange: [ -1.413, 1.413 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.011, -0.033, 0.0 ]
+    mass: 1.045
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_an_p_link.wrl" } }
+  -
+    name: RLEG_ANKLE_R
+    parent: RLEG_ANKLE_P
+    jointType: revolute
+    jointId: 31
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ 0.057, 0.033, 0.0 ]
+    jointRange: [ -1.57, 1.256 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.07, 0.0, -0.048 ]
+    mass: 0.223
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_an_r_link.wrl" } }
+  -
+    name: RLEG_FOOT
+    parent: RLEG_ANKLE_R
+    jointType: fixed
+    jointId: 32
+    jointAxis: [ 1.0, 0.0, 0.0 ]
+    translation: [ -0.057, 0.0, -0.087 ]
+    jointRange: [ 0, 0 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.07, 0.0, -0.048 ]
+    mass: 0.223
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_foot.wrl" } }
+  -
+    name: HEAD_Y
+    parent: TORSO_Y
+    jointType: revolute
+    jointId: 33
+    jointAxis: [ 0.0, 0.0, 1.0 ]
+    translation: [ 0.0, 0.0, 0.229 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 5.383
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_head_y_link.wrl" } }
+  -
+    name: HEAD_P
+    parent: HEAD_Y
+    jointType: revolute
+    jointId: 34
+    jointAxis: [ 0.0, 1.0, 0.0 ]
+    translation: [ 0.0, -0.045, 0.039 ]
+    jointRange: [ -1.57, 1.57 ]
+    rotorInertia: 1.0
+    rotorResistor: 1.0
+    centerOfMass: [ -0.0088, 0.0061, 0 ]
+    mass: 5.383
+    inertia: [
+      6.01175E-7, 5.7E-11, -4.4577E-8,
+      5.7E-11, 3.544498E-6, 2.3E-11,
+      -4.4577E-8, 2.3E-11, 3.417531E-6 ]
+    elements: { Resource: { uri: "Thormang3_parts/robotis_head_p_link.wrl" } }

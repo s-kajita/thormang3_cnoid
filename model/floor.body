@@ -1,0 +1,29 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+name: Floor
+links:
+  -
+    name: Floor
+    jointType: fixed
+    elements:
+      -
+        type: Transform
+        translation: [ 0, 0, -0.1 ]
+        elements:
+          type: Shape
+          geometry:
+            type: Box
+            size: [ 10.0, 2.0, 0.2 ] 
+          appearance:
+            material:
+              diffuseColor: [ 0, 0, 1 ]
+      -
+        type: SpotLight
+        translation: [ -1.0, -1.0, 5.0 ]
+        direction: [0.1, 0.1, -1]
+        color: [0.8, 0.8, 0.8]
+        beamWidth: 120
+        cutOffAnkle: 70
+        cutOffExponent: 6
+        attenuation: [0.4, 0.4, 0.0]  
+
