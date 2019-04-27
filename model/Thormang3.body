@@ -15,6 +15,7 @@ links:
       1.0608E-8, 0.0001612104, 4.6692E-8,
       -3.322424E-6, 4.6692E-8, 0.0001608802 ]
     elements: { Resource: { uri: "Thormang3_parts/robotis_pelvis_link.wrl" } }
+
   -
     name: TORSO_Y
     parent: WAIST
@@ -23,8 +24,10 @@ links:
     jointAxis: [ 0.0, 0.0, 1.0 ]
     translation: [ 0.0, 0.0, 0.1705 ]
     jointRange: [ -1.88, 1.88 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 5.383
     inertia: [
@@ -40,8 +43,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.0, 0.152, 0.16 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.194
     inertia: [
@@ -57,8 +62,10 @@ links:
     jointAxis: [ -1.0, 0.0, 0.0 ]
     translation: [ 0.057, 0.060, -0.039 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.875
     inertia: [
@@ -74,8 +81,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ -0.057, 0.033, 0.0 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.122	  
     inertia: [
@@ -91,8 +100,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.030, 0.187, 0.057 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.357	  
     inertia: [
@@ -108,8 +119,10 @@ links:
     jointAxis: [ 1.0, 0.0, 0.0 ]
     translation: [ 0.171, 0.030, -0.057 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.357	  
     inertia: [
@@ -125,8 +138,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.039, 0.0, 0.045 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.768	  
     inertia: [
@@ -142,8 +157,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ 0.045, -0.045, -0.045 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.565	  
     inertia: [
@@ -195,8 +212,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ 0.0, -0.152, 0.16 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.194
     inertia: [
@@ -212,8 +231,10 @@ links:
     jointAxis: [ -1.0, 0.0, 0.0 ]
     translation: [ 0.057, -0.060, -0.039 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.875
     inertia: [
@@ -229,8 +250,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ -0.057, -0.033, 0.0 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.122	  
     inertia: [
@@ -246,8 +269,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.030, -0.187, 0.057 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.357	  
     inertia: [
@@ -263,8 +288,10 @@ links:
     jointAxis: [ 1.0, 0.0, 0.0 ]
     translation: [ 0.171, -0.030, -0.057 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 1.357	  
     inertia: [
@@ -280,8 +307,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.039, 0.0, 0.045 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.768	  
     inertia: [
@@ -297,8 +326,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.045, 0.045, -0.045 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 0.565	  
     inertia: [
@@ -350,8 +381,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.0, 0.093, -0.018 ]
     jointRange: [ -1.41, 1.41 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ 0.012, 0.0, -0.025 ]
     mass: 0.243
     inertia: [
@@ -367,8 +400,10 @@ links:
     jointAxis: [ -1.0, 0.0, 0.0 ]
     translation: [ 0.057, 0.0, -0.075 ]
     jointRange: [ -0.628, 0.942 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.068, 0.0, 0.0 ]
     mass: 1.045
     inertia: [
@@ -384,8 +419,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ -0.057, 0.033, 0.0 ]
     jointRange: [ -1.256, 1.256 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ 0.022, -0.007, -0.168 ]
     mass: 3.095
     inertia: [
@@ -401,8 +438,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.0, 0.06, -0.3 ]
     jointRange: [ -0.314, 2.198 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.002, -0.066, -0.183 ]
     mass: 2.401
     inertia: [
@@ -418,8 +457,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ 0.0, -0.06, -0.3 ]
     jointRange: [ -1.413, 1.413 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.011, -0.033, 0.0 ]
     mass: 1.045
     inertia: [
@@ -435,8 +476,10 @@ links:
     jointAxis: [ 1.0, 0.0, 0.0 ]
     translation: [ 0.057, -0.033, 0.0 ]
     jointRange: [ -1.57, 1.256 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.07, 0.0, -0.048 ]
     mass: 0.223
     inertia: [
@@ -469,8 +512,10 @@ links:
     jointAxis: [ 0.0, 0.0, -1.0 ]
     translation: [ 0.0, -0.093, -0.018 ]
     jointRange: [ -1.41, 1.41 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 18.3E-7
+    rotorResistor: 0.248
+    torqueConst: 0.0128
     centerOfMass: [ -0.012, 0.0, -0.025 ]
     mass: 0.243
     inertia: [
@@ -486,8 +531,10 @@ links:
     jointAxis: [ -1.0, 0.0, 0.0 ]
     translation: [ 0.057, 0.0, -0.075 ]
     jointRange: [ -0.942, 0.628 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.068, 0.0, 0.0 ]
     mass: 1.045
     inertia: [
@@ -503,8 +550,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ -0.057, -0.033, -0.0 ]
     jointRange: [ -1.256, 1.256 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ 0.022, -0.007, -0.168 ]
     mass: 3.095
     inertia: [
@@ -520,8 +569,10 @@ links:
     jointAxis: [ 0.0, -1.0, 0.0 ]
     translation: [ 0.0, -0.06, -0.3 ]
     jointRange: [ -0.314, 2.198 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.002, -0.066, -0.183 ]
     mass: 2.401
     inertia: [
@@ -537,8 +588,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.0, 0.06, -0.3 ]
     jointRange: [ -1.413, 1.413 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.011, -0.033, 0.0 ]
     mass: 1.045
     inertia: [
@@ -554,8 +607,10 @@ links:
     jointAxis: [ 1.0, 0.0, 0.0 ]
     translation: [ 0.057, 0.033, 0.0 ]
     jointRange: [ -1.57, 1.256 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 501.9
+    rotorInertia: 33.3E-7
+    rotorResistor: 0.102
+    torqueConst: 0.0136
     centerOfMass: [ -0.07, 0.0, -0.048 ]
     mass: 0.223
     inertia: [
@@ -588,8 +643,10 @@ links:
     jointAxis: [ 0.0, 0.0, 1.0 ]
     translation: [ 0.0, 0.0, 0.229 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 5.383
     inertia: [
@@ -605,8 +662,10 @@ links:
     jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.0, -0.045, 0.039 ]
     jointRange: [ -1.57, 1.57 ]
-    rotorInertia: 1.0
-    rotorResistor: 1.0
+    gearRatio: 303.8
+    rotorInertia: 10.8E-7
+    rotorResistor: 2.32
+    torqueConst: 0.0234
     centerOfMass: [ -0.0088, 0.0061, 0 ]
     mass: 5.383
     inertia: [
