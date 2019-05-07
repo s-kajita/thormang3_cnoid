@@ -4289,7 +4289,7 @@ Transform {
         material Material
         {
 	       ambientIntensity 0.2
-	       diffuseColor 0.9 0.9 0.9
+	       diffuseColor 0.2 0.2 0.2
 	       specularColor .1 .1 .1
 	       shininess .5
         }
