@@ -22,16 +22,16 @@ items:
           data: 
             modelFile: "${PROJECT_DIR}/model/Thormang3.body"
             currentBaseLink: "WAIST"
-            rootPosition: [ -0.0780026483, 0.196734182, 0.116418758 ]
+            rootPosition: [ 0.0105281668, -0.00146260186, 0.80730892 ]
             rootAttitude: [ 
-              0.0855071549, -0.75863646, 0.645878663, 
-              -0.0979209591, -0.651513278, -0.752291123, 
-              0.991514, 0.00108121541, -0.129995457 ]
+              0.999687333, -4.97278654e-05, 0.0250046661, 
+              4.99402044e-05, 0.999999999, -7.86750923e-06, 
+              -0.0250046657, 9.11378746e-06, 0.999687334 ]
             jointPositions: [ 
-               3.028481,  1.048461,  3.372804,  3.216556, -4.082187,  0.667389, -2.071625, -0.007884, -0.000350, -1.129420, 
-               0.646156, -2.972470, -2.901081,  1.090105,  2.748915,  0.760276,  3.186467,  0.336412, -0.426143, -1.668180, 
-              -0.088782, -2.474819, -3.393265, -6.502617, -0.532404,  0.000000, -1.589676,  3.230209,  1.397202,  3.611225, 
-               3.815373,  1.142919,  0.000000,  1.728904, -3.999130 ]
+               0.000016,  0.006465,  0.010068,  0.006145, -0.000021,  0.000084, -0.000008,  0.000028,  0.000000, -0.000000, 
+              -0.006466, -0.009342, -0.006145,  0.000035, -0.000408,  0.000014, -0.000028, -0.000000, -0.000000,  0.000046, 
+              -0.002412, -0.006992, -0.008698,  0.009316, -0.002350,  0.000000, -0.000095, -0.002417,  0.006956,  0.008753, 
+              -0.009305, -0.002435,  0.000000,  0.000043, -0.000464 ]
             initialRootPosition: [ 0, 0, 0.81 ]
             initialRootAttitude: [ 
               1, 0, 0, 
@@ -46,8 +46,21 @@ items:
             collisionDetection: true
             selfCollisionDetection: false
             isEditable: true
+          children: 
+            - 
+              id: 3
+              name: "SimpleController"
+              plugin: Body
+              class: SimpleControllerItem
+              data: 
+                isNoDelayMode: false
+                controllerOptions: ""
+                controller: "/home/qingweidesk/choreonoid/build/lib/choreonoid-1.7/simplecontroller/Thorman_MinController.so"
+                baseDirectory: "None"
+                reloading: false
+                isOldTargetVariableMode: false
         - 
-          id: 3
+          id: 4
           name: "Floor"
           plugin: Body
           class: BodyItem
@@ -70,7 +83,7 @@ items:
             selfCollisionDetection: false
             isEditable: false
         - 
-          id: 4
+          id: 5
           name: "AISTSimulator"
           plugin: Body
           class: AISTSimulatorItem
@@ -78,7 +91,7 @@ items:
             timeStep: 0.001
             realtimeSync: true
             recording: "full"
-            timeRangeMode: "Unlimited"
+            timeRangeMode: "Time bar range"
             timeLength: 180
             allLinkPositionOutputMode: true
             deviceStateOutput: true
@@ -111,9 +124,9 @@ views:
     class: ItemTreeView
     mounted: true
     state: 
-      selected: [ 4 ]
-      checked: [ 1, 2, 3 ]
-      expanded: [ 1, 2, 3 ]
+      selected: [ 2, 5 ]
+      checked: [ 1, 2, 4 ]
+      expanded: [ 1, 2, 3, 4 ]
   - 
     id: 2
     plugin: Base
@@ -164,9 +177,9 @@ views:
           fieldOfView: 0.698132
           near: 0.01
           far: 100
-          eye: [ 4.21217461, -2.53105355, 2.0257827 ]
-          direction: [ -0.667862155, 0.678320524, -0.30633545 ]
-          up: [ -0.21492255, 0.218288124, 0.951923627 ]
+          eye: [ 6.56553251, 1.70523313, 1.5364897 ]
+          direction: [ -0.960679161, 0.00304241619, -0.277644185 ]
+          up: [ -0.277642792, 0.000879278912, 0.960683979 ]
         - 
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -199,13 +212,13 @@ views:
     mounted: true
     state: 
       showAllJoints: true
-      jointId: false
+      jointId: true
       name: true
       numColumns: 1
-      spinBox: true
+      spinBox: false
       slider: true
       dial: false
-      labelOnLeft: true
+      labelOnLeft: false
       currentBodyItem: 2
   - 
     id: 7
@@ -215,30 +228,23 @@ views:
     state: 
       listingMode: "Link List"
       currentBodyItem: 2
+      bodyItems: 
+        - 
+          id: 4
+          selectedLinks: [ 0 ]
   - 
     id: 8
-    plugin: OpenRTM
-    class: RTSNameServerView
-    mounted: true
-    state: 
-      NameServers: 
-        - 
-          isDefaultNameServer: false
-          host: "localhost"
-          port: 2809
-  - 
-    id: 9
     plugin: Python
     class: PythonConsoleView
     mounted: true
 toolbars: 
   "TimeBar": 
     minTime: 0
-    maxTime: 30
+    maxTime: 20
     frameRate: 100
     playbackFrameRate: 50
     idleLoopDrivenMode: false
-    currentTime: 3.5
+    currentTime: 19.79
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
@@ -276,6 +282,17 @@ toolbars:
     zmpMaxDistanceFromCenter: 0.02
     allLinkPositions: false
     lipSyncMix: false
+    timeToStartBalancer: 0
+    balancerIterations: 2
+    plainBalancerMode: false
+    boundaryConditionType: position
+    boundarySmootherType: quintic
+    boundarySmootherTime: 0.5
+    boundaryCmAdjustment: false
+    boundaryCmAdjustmentTime: 1
+    waistHeightRelaxation: false
+    gravity: 9.8
+    dynamicsTimeRatio: 1
 Body: 
   "BodyMotionEngine": 
     updateJointVelocities: false
@@ -287,7 +304,7 @@ Body:
         showPpcom: false
         showZmp: false
       - 
-        bodyItem: 3
+        bodyItem: 4
         showCenterOfMass: false
         showPpcom: false
         showZmp: false
@@ -306,8 +323,6 @@ Body:
     inputFrameRate: 200
     isOutputFrameRateSpecified: false
     outputFrameRate: 200
-OpenRTM: 
-  "deleteUnmanagedRTCsOnStartingSimulation": false
 viewAreas: 
   - 
     type: embedded
@@ -315,12 +330,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 279, 1363 ]
+      sizes: [ 425, 2078 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 450, 449 ]
+          sizes: [ 660, 658 ]
           children: 
             - 
               type: pane
@@ -333,12 +348,12 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 642, 257 ]
+          sizes: [ 941, 377 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 514, 843 ]
+              sizes: [ 510, 1562 ]
               children: 
                 - 
                   type: pane
@@ -350,7 +365,7 @@ viewAreas:
                   current: 3
             - 
               type: pane
-              views: [ 2, 9 ]
+              views: [ 2 ]
               current: 2
 layoutOfToolBars: 
   rows: 
