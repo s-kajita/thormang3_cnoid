@@ -1,0 +1,2 @@
+add_cnoid_simple_controller(Thorman_MinController Thorman_MinController.cpp)
+
